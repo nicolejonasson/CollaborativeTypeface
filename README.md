@@ -1,2 +1,2 @@
-# CollaborativeTypeface
-Collaborative Typeface Kadk
+# Collaborative Typeface
+An ongoing collaborative typeface 
