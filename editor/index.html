@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- See http://www.firepad.io/docs/ for detailed embedding docs. -->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+
+  <!-- CodeMirror -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+  <!-- Firepad -->
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+
+</head>
+
+<body onload="init()">
+  <div id="firepad"></div>
+  <script>
+    function init() {
+      // Initialize Firebase.
+      // TODO: replace with your Firebase project configuration.
+      var config = {
+        apiKey: "AIzaSyCx346jZ4KfwBkBMnL15ERd7vGgTgXpkLY",
+        authDomain: "collaborate-type.firebaseapp.com",
+        databaseURL: "https://collaborate-type.firebaseio.com",
+        projectId: "collaborate-type",
+        storageBucket: "",
+        messagingSenderId: "164425326164"
+      };
+      firebase.initializeApp(config);
+
+      // Get Firebase Database reference.
+      var firepadRef = firebase.database().ref();
+
+      // Create CodeMirror (with lineWrapping on).
+      var codeMirror = CodeMirror(document.getElementById('firepad'), { lineWrapping: true });
+
+      // Create Firepad (with rich text toolbar and shortcuts enabled).
+      var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
+        richTextShortcuts: true,
+        richTextToolbar: false,
+        defaultText: 'Hello, World!'
+      });
+    }
+  </script>
+</body>
