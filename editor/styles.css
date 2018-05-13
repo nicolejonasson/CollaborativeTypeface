@@ -1,0 +1,57 @@
+@font-face {
+font-family: 'CT';
+src:
+ url('https://rawgit.com/nicolejonasson/CollaborativeTypeface/gh-pages/Type/CT-Regular.ttf');
+}
+html { height: 100%; }
+body { margin: 0; height: 100%; position: relative; }
+
+#head{
+  margin: 10px auto;
+  text-align: center;
+  position: relative;
+  font-family: "ct";
+  font-size: 30px;
+  color: red;
+}
+
+#firepad{
+  margin: 50px auto;
+  width: 500px;
+  height: 700px;
+  border: 1px solid #c1aaf7;
+  /* box-shadow: 5px 5px 5px #c1aaf7; */
+}
+
+.firepad {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: left;
+  line-height: normal;
+}
+
+.firepad .CodeMirror {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+}
+
+
+.firepad-richtext .CodeMirror {
+  font-family: "ct";
+  font-size: 50px;
+  color: red;
+  background: #e8e6ef;
+}
+
+.firepad-spacer {
+  height: 10px;
+  width: 1px;
+}
