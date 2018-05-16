@@ -1,4 +1,5 @@
 # This is how you contribute :) 
-https://nicolejonasson.github.io/CollaborativeTypeface/editor/
 
-![howto](https://user-images.githubusercontent.com/38101829/39968976-cf10ce90-56d5-11e8-94fc-56cc173a833c.png)
+![howto2](https://user-images.githubusercontent.com/38101829/40102097-e382f73e-58e9-11e8-9f6b-d748006946e4.png)
+
+https://nicolejonasson.github.io/CollaborativeTypeface/editor/
