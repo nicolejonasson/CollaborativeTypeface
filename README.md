@@ -1,9 +1,10 @@
 
-This is the repository for a collaborative typeface, follow the guide below and take part :)
+..........>>>-------------------- > This is the repository for a collaborative typeface < --------------------<<<..............
 
-Write with the typeface here: 
-https://nicolejonasson.github.io/CollaborativeTypeface/website/Home/
+˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜ ^-^ follow the guide if you want to take ^-^ ˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜
 
+<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 
 
-![howto4](https://user-images.githubusercontent.com/38101829/40112741-526eafc2-5907-11e8-9b30-4ff6f9a80890.png)
+Try the typeface: https://nicolejonasson.github.io/CollaborativeTypeface/website/Home/
+![howto](https://user-images.githubusercontent.com/38101829/41200429-91556158-6ca4-11e8-81cf-496a3ee041f4.jpg)
 
