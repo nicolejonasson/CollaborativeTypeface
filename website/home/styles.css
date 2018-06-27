@@ -1,0 +1,261 @@
+
+@font-face {
+font-family: 'CT';
+src:
+ url('https://rawgit.com/nicolejonasson/CollaborativeTypeface/gh-pages/Type/CT-Regular.ttf');
+}
+
+
+html {
+  height: 100%; }
+
+body {
+  /* background: radial-gradient(rgb(215, 255, 160), white, rgb(215, 255, 160)); */
+
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+#canvas-container{
+  width: 110%;
+  top:0;
+  left: 0;
+}
+
+
+#wrapper{
+  width: 100%;
+  height: 80%;
+  top: 20%;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows:repeat(5,1fr);
+  /* margin-right: ; */
+  margin-left: 2%;
+
+}
+
+#wrapper > div{
+    -webkit-user-select: none;
+    cursor: cell;
+    padding: 20px;
+    border-radius: 15px;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+#wrapper > .box:hover{
+  background: rgba(200, 200, 200, 0.5);
+  color: white;
+}
+
+#intro{
+  height: 600px;
+  /* font-size: 40px; */
+  width: 500px;
+  /* margin-left: 30%;
+  margin-right: 30%; */
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#box{
+  background: rgba(255, 255, 255, 0.1);
+  width: 400px;
+  height: 150px;
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-bottom: 0px;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#box:hover{
+  background: rgba(200, 200, 200, 0.5);
+  color: white;
+}
+
+
+
+/* #box-1{
+  visibility: hidden;
+  grid-column: 2;
+  grid-row: 3;
+
+} */
+
+
+#box-2{
+  visibility: hidden;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+#box-3{
+  visibility: hidden;
+  grid-column: 4;
+  grid-row: 2;
+}
+
+
+#box-4{
+  visibility: hidden;
+  grid-column: 2;
+  grid-row: 4;
+}
+
+
+#box-5{
+  visibility: hidden;
+  grid-column: 4;
+  grid-row: 4;
+}
+
+
+#box-6{
+  /* margin-top: -150px; */
+  visibility: hidden;
+  /* margin-top: -50px; */
+  grid-column: 5;
+  grid-row: 1;
+}
+
+#box-7{
+  /* margin-top: -150px; */
+  visibility: hidden;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#box-8{
+  margin-top: 100px;
+  visibility: hidden;
+  grid-column: 5;
+  grid-row: 4;
+}
+
+#box-9{
+  margin-top: 100px;
+  visibility: hidden;
+  grid-column: 1;
+  grid-row: 4;
+}
+
+p.big{
+  font-family: "CT";
+  font-size: 60px;
+  text-align: center;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  margin-top: 20px;
+  letter-spacing: 20px;
+  line-height: 1;
+
+
+}
+
+span{
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  font-family: "CT";
+  font-size: 20px;
+  letter-spacing: 5px;
+  line-height: 2;
+  text-transform: lowercase;
+  /* background: rgba(255, 255, 255, 0.5); */
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+
+p.small{
+  font-family: "times new roman";
+  /* font-family: "ct"; */
+  /* letter-spacing: 5px; */
+
+  margin-bottom: 200px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+.des{
+  font-family: "Times New Roman";
+  font-size: 15px;
+  width: 300px;
+  height: 80px;
+}
+
+.box:hover > div {
+  background: rgba(220, 220, 220, 0.5);
+  color: white;
+  border: 0.5px solid white;
+}
+
+.box{
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  letter-spacing: 10px;
+  font-family: "ct";
+  font-size: 30px;
+  line-height: 50px;
+  color: black;
+
+}
+
+
+a{
+  /* margin-left:90px; */
+  text-align: center;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border: 0.5px solid black;
+  font-family: "ct";
+  text-decoration: none;
+  color:black;
+}
+
+a:hover{
+  background: rgba(220, 220, 220, 0.5);
+  color: white;
+  border: 0.5px solid white;
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    padding: 15px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    padding: 15px;
+    float: left;
+    margin-top: 10px;
+    margin-left: : 10px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

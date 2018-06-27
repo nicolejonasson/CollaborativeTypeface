@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <!-- <style> body {padding: 0; margin: 0;} </style> -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <div id = "canvas-container"></div>
+    <div id= "wrapper">
+
+      <div onclick= "showRooms()" id = "intro" >
+        <p class = "small"> <span> wellcome to </span> <br> </p>
+
+
+        <p class = "small"> <br> A home for all the people interested in <br> design and visual communication.<br>
+
+                        <br>A place where everyone can contribute <br>
+                        and benefit from each others knowledge. <br><br>
+
+                        <span> Sharing and caring <br></span> <span> is waiting for you </span>
+
+
+                        <br><br></i>Click to enter the rooms<br>
+                        <!-- <i class="arrow right"></i> -->
+                        <i class="arrow down"></i>
+        </p>
+      </div>
+
+      <div onclick= "showHide('intro')"  id = "box" >
+        <p class = "big">common room</p>
+      </div>
+
+      <!-- <div onclick= "showHide('box-0')"  id = "box" >
+        <p class = "big">common room</p>
+      </div> -->
+
+        <!-- <div onclick= "showRooms()"  id="box-0">
+          <p class = "small"> The home for all people interested in visual communication.<br>
+                          A place where everyone can contribute and
+                          benefit from each others knowledge.
+
+                          <span> Sharing and caring is waiting for you </span>
+
+                          Click to enter and visit the rooms.
+          </p>
+        </div> -->
+
+        <!-- <div onclick= "showRooms()" id = "box-1">
+            <p class = "small"> there are four rooms you can visit </p>
+        </div> -->
+
+        <div  onclick= "show('box-7')" class = "box" id = "box-2">
+            library<i class="arrow left"></i>
+        </div>
+
+        <div onclick= "show('box-6')" class = "box" id = "box-3">
+            workshop<i class="arrow right"></i>
+        </div>
+
+        <div onclick= "show('box-9')"  class = "box" id = "box-4">
+          kitchen <i class="arrow left"></i>
+        </div>
+        <div onclick= "show('box-8')" class = "box" id = "box-5">
+            playground <i class="arrow right"></i>
+        </div>
+
+        <div class="des" id = "box-6">
+          A room for collaborative work and ideas. This is where we make stuff happen and share ideas for the future.
+          <a href = "../workshop/index.html"> enter here </a>
+        </div>
+        <div class="des" id = "box-7">
+            The room for text, words, theorie and questions. For all who like to read, or who would like to, like to read.
+          <a href = "../library/index.html" >enter here </a>
+        </div>
+        <div class="des" id = "box-8">
+           A place to play, draw a drawing and have fun.
+          <a href = "../playground/index.html" >enter here </a>
+        </div>
+
+        <div class="des" id = "box-9">
+          A room for information and updates. We cook food for thoughts and keep each other in the loop.
+            <a href = "../kitchen/index.html" >enter here </a>
+        </div>
+      </div>
+
+
+    <script>
+     // function init(){
+     //   var x = document.getElementById("box-1");
+     //   x.style.visibility = 'hidden';
+     //
+     //   var elems = document.getElementsByClassName("box");
+     //   var i;
+     //   for (i = 0; i < elems.length; i++) {
+     //     var x = elems[i];
+     //     x.style.visibility = 'hidden';
+     //   }
+     //
+     //   var des = document.getElementsByClassName("Des");
+     //   var j;
+     //   for (j = 0; j < elems.length; j++) {
+     //     var x = des[j];
+     //     x.style.visibility = 'hidden';
+     //   }
+     //
+     //
+     //
+     // }
+
+
+    function show(name){
+      var x = document.getElementById(name);
+
+        if (x.style.visibility == 'visible'){
+          x.style.visibility = 'hidden';
+        }
+        else{
+          x.style.visibility = 'visible';
+        }
+      }
+
+      function showHide(name){
+        var x = document.getElementById(name);
+        var elems = document.getElementsByClassName("box");
+
+        for (var i = 0; i < elems.length; i++) {
+          var y = elems[i];
+          if (y.style.visibility == 'visible'){
+            y.style.visibility = 'hidden';
+          }
+        }
+
+        var el = document.getElementsByClassName("des");
+
+        for (var i = 0; i < el.length; i++) {
+          var y = el[i];
+          if (y.style.visibility == 'visible'){
+            y.style.visibility = 'hidden';
+          }
+        }
+
+
+          if (x.style.visibility == 'visible'){
+            x.style.visibility = 'hidden';
+          }
+          else{
+            x.style.visibility = 'visible';
+          }
+        }
+
+
+      function showRooms(){
+        var elems = document.getElementsByClassName("box");
+        var i;
+        for (i = 0; i < elems.length; i++) {
+          var x = elems[i];
+          if (x.style.visibility == 'visible'){
+            x.style.visibility = 'hidden';
+          }
+          else{
+            x.style.visibility = 'visible';
+          }
+        }
+    }
+    $(function() {
+        $( ".drag" ).draggable();
+    });
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="box" id = "box-2">
+  <ul class = "medi">
+    <li><a href="#"> library </a></li>
+    <li><a href="#"> the workshop </a></li>
+    <li><a href="#"> kitchen </a></li>
+    <li><a href="#"> playground </a></li>
+  </ul>
+</div> -->

@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="../js/jquery-min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.js"></script>
+
+
+
+
+  <body>
+    <div id= "head-bar">
+      <div>the playground the playground the playground the playground the playground the playground the play</div>
+    </div>
+
+    <a href = "../home/index.html" >
+      <div id= "exit"> go back to common room go back to common room go back to common room </div>
+    </a>
+
+    <div id="all-drags">
+      <div class = "drag" id="drag-0" >a</div>
+      <div class = "drag" id="drag-1" >b</div>
+      <div class = "drag" id="drag-2" >c</div>
+      <div class = "drag" id="drag-3" >d</div>
+      <div class = "drag" id="drag-4" >e</div>
+      <div class = "drag" id="drag-5" >f</div>
+      <div class = "drag" id="drag-6" >g</div>
+      <div class = "drag" id="drag-7" >h</div>
+      <div class = "drag" id="drag-8" >i</div>
+      <div class = "drag" id="drag-10" >j</div>
+      <div class = "drag" id="drag-11" >k</div>
+      <div class = "drag" id="drag-12" >l</div>
+      <div class = "drag" id="drag-13" >m</div>
+      <div class = "drag" id="drag-14" >n</div>
+      <div class = "drag" id="drag-15" >o</div>
+      <div class = "drag" id="drag-16" >p</div>
+      <div class = "drag" id="drag-17" >q</div>
+      <div class = "drag" id="drag-18" >r</div>
+      <div class = "drag" id="drag-19" >s</div>
+      <div class = "drag" id="drag-20" >t</div>
+      <div class = "drag" id="drag-21" >u</div>
+      <div class = "drag" id="drag-22" >v</div>
+      <div class = "drag" id="drag-23" >x</div>
+      <div class = "drag" id="drag-24" >y</div>
+      <div class = "drag" id="drag-25" >z</div>
+      <div class = "drag" id="drag-26" >æ</div>
+      <div class = "drag" id="drag-27" >ø</div>
+      <div class = "drag" id="drag-28" >å</div>
+
+
+
+
+
+
+
+      <div class = "drag" id="draggable-0" >o</div>
+      <div class = "drag" id="draggable-1" >o</div>
+      <div class = "drag" id="draggable-2" >o</div>
+      <div class = "drag" id="draggable-3" >o</div>
+
+      <div class = "drag" id="draggable-0" >o</div>
+      <div class = "drag" id="draggable-1" >o</div>
+      <div class = "drag" id="draggable-2" >o</div>
+      <div class = "drag" id="draggable-3" >o</div>
+
+      <div class = "drag" id="draggable-0" >o</div>
+      <div class = "drag" id="draggable-1" >o</div>
+      <div class = "drag" id="draggable-2" >o</div>
+      <div class = "drag" id="draggable-3" >o</div>
+    </div>
+
+    <div id= "head">
+      <div class ="box-head" id="head-1">welcome</div>
+      <div class ="box-head" id="head-2">to the</div>
+      <div onclick = "showHide('head-4')" class ="box-head" id="head-3">playground  <i class="arrow right"></i> </div>
+
+        <div onclick = "show('head-5')" class ="box" id="head-4">grab your</div>
+        <div onclick = "show('head-6')" class ="box" id="head-5">mouse and draw </div>
+
+          <div onclick = "show('head-7')" class ="box" id="head-6">on the canvas </div>
+          <div onclick = "show('head-8')"class ="box" id="head-7">continue on an old drawing </i></div>
+
+          <div onclick = "show('head-9')" class ="box" id="head-8">or create a new one</i></div>
+          <div onclick = "show('head-9')"class ="box" id="head-9">and have fun </div>
+
+            <!-- <div onclick = "show('head-9')" class ="box" id="head-8">collaborative typeface</div>
+            <div class ="box" id="head-9">sharing space</div> -->
+    </div>
+
+    <div id= "grad">
+      <div id="change"> paint the room</div>
+      <button onclick = "grad('color-input')" > paint </button>
+      <input type = "text" id="color-input" value = "write a color">
+
+    <div  class="colors"> <span> try fx. <br></span>
+      Fuchsia <br>
+      Lavender <br>
+      Lime <br>
+      MediumAquaMarine<br>
+      MistyRose <br>
+      OrangeRed <br>
+      Turquoise <br>
+      Thistle <br>
+      PaleGreen <br>
+      LightSalmon <br>
+      honeyDew <br>
+      DarkSlateGrey <br>
+      Aqua <br>
+      AliceBlue <br>
+      Sienna<br>
+      <!-- ttps://www.w3schools.com/cssref/css_colors.asp<br> -->
+    </div>
+    </div>
+
+    <div id="heading"> drawing canvas</div>
+
+    <div id="drawing-container">
+    <div id="rect"></div>
+      <div id="left-frame">
+        <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
+        <div class = "ramme">æææææææææææææææææææææææææææææææææææ</div>
+
+      </div>
+
+      <div id="right-frame">
+        <div class = "ramme">æææææææææææææææææææææææææææææææææææ</div>
+        <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
+      </div>
+
+
+      <div id="top-frame">
+        <div class = "ramme">ææææææææææææææææææææææææææææææææææææææææææææ</div>
+        <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
+        <div class="pop-up" id="pop-rect">You can drag the corners <br> and use them on the canvas</div>
+
+      </div>
+
+
+
+      <div id= "canvasContainer"></div>
+
+
+      <div id="bottom-frame">
+        <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
+        <div class = "ramme">ææææææææææææææææææææææææææææææææææææææææææææ</div>
+      </div>
+
+      <div id="mid">
+        <!-- <div class="pop-up" id="pop-1">Add you drawing to <br> the end of the list</div> -->
+        <!-- <div class="pop-up" id="pop-2"> create a new drawing </div> -->
+        <button class = "button" id ="save">save</button>
+        <button class = "button" id ="clear">new</button>
+        <button class = "button" id ="colorCanvas">color</button>
+      </div>
+
+
+      <div id="list">
+        <div id= "text"> click on list to see older drawings <br></div>
+        <!-- continue a drawing or press clear to start new one.<br>
+        save adds you drawing at the end of list.</div> -->
+        <ol id= "drawingList"> </ol>
+      </div>
+
+
+
+
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+
+    <script>
+
+    function showHide(name){
+      var x = document.getElementById(name);
+      var elems = document.getElementsByClassName("box");
+
+      if (x.style.visibility == 'visible'){
+        // x.style.visibility = 'hidden';
+
+        for (var i = 0; i < elems.length; i++) {
+          var y = elems[i];
+          if (y.style.visibility == 'visible'){
+            y.style.visibility = 'hidden';
+          }
+        }
+
+      }
+      else{
+        x.style.visibility = 'visible';
+      }
+    }
+
+
+
+
+
+
+      function show(name){
+        var x = document.getElementById(name);
+
+          if (x.style.visibility == 'visible'){
+            x.style.visibility = 'hidden';
+          }
+          else{
+            x.style.visibility = 'visible';
+          }
+        }
+
+
+        $(function() {
+            $( ".drag" ).draggable();
+        });
+
+        function grad(color){
+          var x = document.getElementById(color).value;
+          var v = "red";
+
+          $('body').css({'background-image': 'linear-gradient(to top,  white 0%,'+ x +' 50%, white 100%)'});
+          console.log(x);
+
+        }
+    </script>
+
+  </body>
+</html>

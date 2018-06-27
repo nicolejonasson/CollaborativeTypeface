@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <!-- <style> body {padding: 0; margin: 0;} </style> -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+
+    <script src="../js/jquery-min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.js"></script>
+
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+    <!-- Firepad -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+  </head>
+
+  <body onload="init()">
+    <!-- <div onclick= "showRooms()" id ="test">test</div> -->
+    <div id= "head-bar">
+      <div> workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div>
+      <!-- <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div>
+      <div>the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop the workshop </div> -->
+    </div>
+
+    <a href = "../home/index.html" >
+      <div id= "exit"> go back to common room go back to common room go back to common room go back to common room</div>
+    </a>
+
+    <div class="drag" id="draggable-0" >ø</div>
+    <div class = "drag" id="draggable-1" >o</div>
+    <div class = "drag" id="draggable-2" >æ</div>
+    <div class="drag" id="draggable-3" >ø</div>
+    <div class = "drag" id="draggable-4" >o</div>
+    <div class = "drag" id="draggable-5" >æ</div>
+    <div class="drag" id="draggable-6" >ø</div>
+    <div class = "drag" id="draggable-7" >o</div>
+    <div class = "drag" id="draggable-8" >æ</div>
+
+    <div class="drag" id="draggable-p" >p</div>
+    <div class = "drag" id="draggable-a" >a</div>
+    <div class = "drag" id="draggable-r" >r</div>
+    <div class ="drag" id="draggable-t" >t</div>
+    <div class = "drag" id="draggable-i" >i</div>
+    <div class = "drag" id="draggable-s" >s</div>
+    <div class = "drag" id="draggable-ii" >i</div>
+    <div class = "drag" id="draggable-pp" >p</div>
+    <div class = "drag" id="draggable-aa" >a</div>
+    <div class = "drag" id="draggable-tt" >t</div>
+    <div class = "drag" id="draggable-e" >e</div>
+
+
+    <div id= "head">
+      <div class ="box-head" id="head-1">wellcome</div>
+      <div class ="box-head" id="head-2">to the</div>
+      <div onclick = "showHide('head-4')" class ="box-head" id="head-3">workshop<i class="arrow right"></i></div>
+
+        <div onclick = "show('head-5')" class ="box" id="head-4">join the </div>
+        <div onclick = "show('head-6')" class ="box" id="head-5">collaboration </div>
+        <div onclick = "show('head-7')" class ="box" id="head-6"> and particapation</div>
+        <div onclick = "show('head-8')" class ="box" id="head-7">take part in making</div>
+
+          <div onclick = "show('head-9')" class ="box" id="head-8">the typeface</div>
+          <div onclick = "show('head-10')"class ="box" id="head-9">and contribute to</div>
+
+            <div onclick = "show('head-11')" class ="box" id="head-10">building this place</div>
+            <!-- <div conclick = "show('head-11')" class ="box" id="head-11">building this place</div> -->
+    </div>
+
+    <div id= "side"></div>
+
+    <div id = "participate">
+
+        <div class = "small" id= "type" > how to edit the typeface: </div>
+        <div class = "greyBox" id= "h1" >make whatever</div>
+        <div class = "greyBox" id= "h2" >changes you want </div>
+        <div class = "greyBox" id= "brød" >
+          <p>
+          The typeface is an ongoing collaboration and experiment.<br>
+          It is opensource and everyone can contribute and work on it.<br>
+     	    The font file is on GitHub, ready to download and modify.<br>
+
+          When edited, the typeface will change in all rooms.<br>
+
+    	    There are no rules, all you need is a font editor. <br>
+          Dont be shy, use your typo skills (or lack thereoff) and <br>
+          make great impovements.<br><br>
+
+          Visit the GitHub repository and follow the guide: <br><br>
+           <a href=" https://github.com/nicolejonasson/CollaborativeTypeface"> github page</a>
+         </p>
+       </div>
+
+       <div class = "small" id= "code" > how to edit the code: </div>
+       <div class = "greyBox" id= "code-brød" >
+         <p>
+          Change the code and be a part of building this place.<br>
+         The code for this webpage is open source and anybody<br>
+         who would like to edit or contribute is wellcome.<br>
+         You could change the colors. The typeface.<br>
+         Make some inprovements, add another page, or whatever.<br><br>
+         It is on github ready to be modified and inproved.<br><br>
+
+         Visit the GitHub repository and find the code: <br><br>
+          <a href=" https://github.com/nicolejonasson/CollaborativeTypeface"> github page</a>
+        </p>
+      </div>
+
+
+
+      <div class = "greyBox" id= "h4"> the typeface </div>
+       <div class = "greyBox" id= "h3"> play with the letters</div>
+
+
+
+
+      <!-- <div id = "comments">
+        <div id= "input-comment">Comment <input type = "text"></div>
+        <div contenteditable="true" class = "greyBox"></div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+        <div class = "greyBox"> </div>
+      </div> -->
+
+
+          <div  class =" small-box" id="firepad-0"> </div>
+          <div  class =" small-box" id="firepad-1"></div>
+          <div  class =" small-box" id="firepad-2"></div>
+          <div  class =" small-box" id="firepad-3"></div>
+
+          <div  class ="medi-box" id="firepad-4"></div>
+          <div  class ="big-box" id="firepad-5"></div>
+
+          <div  class ="big" id="firepad-6"></div>
+        </div>
+
+
+        <div id = "bottom">
+          <div  class ="bottom-times" id="firepad-7"></div>
+
+          <div id= "ex-projects">link to relevant projects</div>
+          <div id= "projects">projects</div>
+          <div class= "bottom-ø">ø</div>
+
+          <div  class ="bottom-times" id="firepad-8"></div>
+
+          <div id= "sources">sources</div>
+          <div id= "ex-sources">share opensource typefaces </div>
+          <div class= "bottom-ø">o</div>
+
+          <div  class ="bottom-times" id="firepad-9"></div>
+
+          <div id= "com">comments</div>
+          <div id= "ex-comments">write comments for the typeface</div>
+          <div class= "bottom-ø">æ</div>
+        </div>
+
+
+
+
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+
+      <script>
+
+
+      function init() {
+        // // Initialize Firebase.
+        // // TODO: replace with your Firebase project configuration.
+        var config = {
+          apiKey: "AIzaSyDTLvn12YhyZ86R_zHw2AauWa8swoJwRZc",
+          authDomain: "collab-6fa95.firebaseapp.com",
+          databaseURL: "https://collab-6fa95.firebaseio.com",
+          projectId: "collab-6fa95",
+          storageBucket: "collab-6fa95.appspot.com",
+          messagingSenderId: "942968685131"
+
+        };
+        firebase.initializeApp(config);
+
+
+        for (var i = 0; i < 10; i++) {
+
+          var firepadRef = firebase.database().ref("letter"+i);
+
+          var codeMirror = CodeMirror(document.getElementById("firepad-"+i), { lineWrapping: true });
+
+          var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
+            richTextShortcuts: true,
+            richTextToolbar: false,
+          });
+        }
+
+
+      }
+
+
+
+      function hoverIn(){
+        var x = document.getElementById("times");
+
+        if (x.style.visibility == 'visible'){
+          x.style.visibility = 'hidden';
+        }
+        else{
+          x.style.visibility = 'visible';
+
+        }
+      }
+
+
+      function showHide(name){
+        var x = document.getElementById(name);
+        var elems = document.getElementsByClassName("box");
+
+        if (x.style.visibility == 'visible'){
+          // x.style.visibility = 'hidden';
+
+          for (var i = 0; i < elems.length; i++) {
+            var y = elems[i];
+            if (y.style.visibility == 'visible'){
+              y.style.visibility = 'hidden';
+            }
+          }
+
+        }
+        else{
+          x.style.visibility = 'visible';
+        }
+      }
+
+
+
+      function show(name){
+        var x = document.getElementById(name);
+
+          if (x.style.visibility == 'visible'){
+            x.style.visibility = 'hidden';
+          }
+          else{
+            x.style.visibility = 'visible';
+          }
+        }
+
+
+      $(function() {
+          $( ".drag" ).draggable();
+      });
+
+
+      </script>
+
+      </body>
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="box" id = "box-2">
+  <ul class = "medi">
+    <li><a href="#"> library </a></li>
+    <li><a href="#"> the workshop </a></li>
+    <li><a href="#"> kitchen </a></li>
+    <li><a href="#"> playground </a></li>
+  </ul>
+</div> -->
