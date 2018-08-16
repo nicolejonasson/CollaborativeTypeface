@@ -16,40 +16,38 @@ body {
   height: 100%;
   position: relative;
 }
-
 #head-bar{
   z-index: 1000;
   padding: 5px;
-  width: 3100px;;
-  letter-spacing: 10px;
+  width: 200%;
+  letter-spacing: 0.5vw;
   font-family: "CT";
   position: fixed;
   margin: 0px;
   left: 0;
   top:0;
-  font-size: 15px;
+  font-size: 0.9vw;
   color: black;
   background: rgba(250, 250, 250, 0.5);
   box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 #exit{
-  padding-top: 50px;
+  padding-top: 4vh;
+  /* padding-right: 5px; */
   z-index: 10;
-  /* border-radius: 25px; */
   background: rgba(250, 250, 250, 0.5);
   box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.1);
-  height: 3000px;
-  width: 30px;
-  line-height: 30px;
-  letter-spacing: 10px;
+  height: 150%;
+  width: 2vw;
+  line-height: 2vw;
+  letter-spacing: 0.5vw;
   font-family: "CT";
   position: fixed;
   /* position: absolute; */
   top: 0;
   left: 0;
-  font-size: 15px;
+  font-size: 1vw;
   color: black;
   writing-mode: vertical-rl;
 }
@@ -58,7 +56,7 @@ body {
 .drag{
     position: absolute;
     font-family: "CT";
-    font-size: 40px;
+    font-size: 2.5vw;
     z-index: 10;
     text-align: center;
     cursor: -webkit-grabbing;
@@ -67,46 +65,46 @@ body {
 
 #draggable-0{
   left:10%;
-  top:280%;
+  top:340%;
 }
 
 #draggable-1{
   left:20%;
-  top:280%;
+  top:340%;
 }
 
 #draggable-2{
   left:30%;
-  top:280%;
+  top:340%;
 }
 
 #draggable-3{
   left:40%;
-  top:280%;
+  top:340%;
 }
 
 #draggable-4{
   left:50%;
-  top:280%;
+  top:340%;
 }
 
 #draggable-5{
   left:60%;
-  top:280%;
+  top:340%;
 }
 #draggable-6{
   left:70%;
-  top:280%;
+  top:340%;
 }
 
 #draggable-7{
   left:80%;
-  top:280%;
+  top:340%;
 }
 
 #draggable-8{
   left:90%;
-  top:280%;
+  top:340%;
 }
 
 
@@ -166,55 +164,53 @@ body {
 
 
 
-
 .box{
-
   -webkit-user-select: none;
   cursor: cell;
-  width: 500px;
-  height: 50px;
-  line-height: 50px;
-  padding: 20px;
+  width: 25vw;
+  height: 3vh;
+  line-height: 5vh;
+  padding: 2vw;
   font-family: "CT";
   border-radius: 15px;
   color: black;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
-  letter-spacing: 20px;
+  letter-spacing: 0.5vw;
+
 }
-
 .box-head{
-
   -webkit-user-select: none;
   cursor: cell;
-  width: 500px;
-  height: 50px;
-  line-height: 50px;
-  padding: 20px;
+  width: 25vw;
+  height: 3vh;
+  line-height: 5vh;
+  letter-spacing: 1vw;
+  padding: 2vw;
   font-family: "CT";
   border-radius: 15px;
   color: black;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
-  letter-spacing: 20px;
+
 }
 
 i {
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 3px;
 }
 
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    padding: 15px;
+    padding: 3%;
     float: right;
-    margin-top: 10px;
-    margin-right: 10px;
+    line-height: 5vh;
+    /* margin-top: 2%;
+    margin-right: 2%; */
 }
 
 
@@ -233,7 +229,7 @@ i {
 
 #head-1{
   z-index: 1;
-  font-size: 30px;
+  font-size: 2vw;
   grid-column: 1;
   grid-row:1;
 
@@ -241,14 +237,14 @@ i {
 
 #head-2{
   z-index: 1;
-  font-size: 30px;
+  font-size: 2vw;
   grid-column: 1;
   grid-row:2;
 }
 
 #head-3{
   z-index: 1;
-  font-size: 30px;
+  font-size: 2vw;
   grid-column: 1;
   grid-row:3;
 }
@@ -262,20 +258,11 @@ i {
 }
 
 
-#times{
-  z-index: 1;
-  font-family: "times New Roman";
-  font-size: 15px;
-  grid-column: 1;
-  grid-row: 4;
-  line-height: normal;
-  letter-spacing: normal;
-  visibility: hidden;
-}
+
 
 #head-4{
   z-index: 0;
-  font-size: 20px;
+  font-size: 1.5vw;
   grid-column: 2;
   grid-row:3;
   visibility: hidden;
@@ -284,7 +271,7 @@ i {
 
 #head-5{
   z-index: 0;
-  font-size: 20px;
+  font-size: 1.5vw;
   grid-column: 2;
   grid-row:4;
   visibility: hidden;
@@ -293,9 +280,8 @@ i {
 
 #head-6{
   z-index: 1;
-  font-size: 15px;
+  font-size: 1vw;
   /* line-height: normal; */
-  letter-spacing: 10px;
   grid-column: 3;
   grid-row:4;
   visibility: hidden;
@@ -304,9 +290,8 @@ i {
 
 #head-7{
   z-index: 1;
-  font-size: 15px;
+  font-size: 1vw;
   /* line-height: normal; */
-  letter-spacing: 5px;
   grid-column: 3;
   grid-row:5;
   visibility: hidden;
@@ -315,9 +300,8 @@ i {
 
 #head-8{
   z-index: 1;
-  font-size: 15px;
+  font-size: 0.8vw;
   /* line-height: normal; */
-  letter-spacing: 10px;
   grid-column: 4;
   grid-row:5;
   visibility: hidden;
@@ -326,9 +310,8 @@ i {
 
 #head-9{
   z-index: 1;
-  font-size: 15px;
+  font-size: 0.8vw;
   /* line-height: normal; */
-  letter-spacing: 5px;
   grid-column: 4;
   grid-row:6;
   visibility: hidden;
@@ -336,9 +319,8 @@ i {
 
 #head-10{
   z-index: 1;
-  font-size: 15px;
+  font-size: 0.8vw;
   /* line-height: normal; */
-  letter-spacing: 10px;
   grid-column: 5;
   grid-row:6;
   visibility: hidden;
@@ -347,9 +329,8 @@ i {
 
 #head-11{
   z-index: 1;
-  font-size: 15px;
+  font-size: 0.8vw;
   /* line-height: normal; */
-  letter-spacing: 5px;
   grid-column: 5;
   grid-row:7;
   visibility: hidden;
@@ -365,7 +346,7 @@ i {
 
 #participate{
   width: 100%;
-  height: 105%;
+  height: 50vh;
   margin-top: 40%;
   display: grid;
   grid-template-columns: repeat(10, 300px);
@@ -388,10 +369,10 @@ i {
 
 .small{
   text-align: center;
-  line-height: 30px;
+  line-height: 7vh;
   font-family: "CT";
-  font-size: 15px;
-  letter-spacing: 10px;
+  font-size: 2vw;
+  letter-spacing: 0.5vw;
   color: black;
   border-radius: 15px;
   padding: 10px;
@@ -402,18 +383,14 @@ i {
 
 
 .greyBox{
-  width: 450px;
-  /* height: auto; */
-  /* background: rgba(220,220,220, 0.5); */
+  width: 30vw;
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   padding: 15px;
   border-radius: 15px;
-  /* border: 0.5px solid rgba(220,220,220, 0.5); */
   font-family: "CT";
-  font-size: 25px;
-  letter-spacing: 10px;
-
+  font-size: 1.2vw;
+  letter-spacing: 1vw;
   text-align: center;
 }
 
@@ -432,20 +409,19 @@ i {
 }
 
 #type{
-  width: 550px;
-  margin-left: -50px;
-  margin-top: -100px;
-  height: 30px;
+  width: 50vw;
+  margin-left: 10%;
+  margin-top: -20vh;
+  height: 7vh;
   grid-column: 2;
   grid-row: 2;
 
 }
 
 #code{
-  height: 30px;
-  width: 550px;
-  margin-left: -50px;
-  margin-top: 400px;
+  width: 50vw;
+  margin-left: 10%;
+  margin-top: 70vh;
   grid-column: 2;
   grid-row: 9;
 
@@ -471,28 +447,28 @@ i {
   margin: 0px;
   grid-column: 7;
   grid-row: 2;
-  width: 600px;
-  height: 30px;
+  width: 40vw;
+  height: 3vh;
 }
 
 #h4{
   margin: 0px;
   grid-column: 5;
   grid-row: 2;
-  width: 400px;
-  height: 30px;
+  width: 28vw;
+  height: 3vh;
 }
 
 #brød{
   margin: 0px;
   padding: 20px;
   padding-top: 0px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   grid-column: 2;
   grid-row: 3;
   font-family: "times New Roman";
-  font-size: 18px;
+  font-size: 1.2vw;
   line-height: 1.5;
   text-align: left;
   letter-spacing: normal;
@@ -503,20 +479,20 @@ i {
   margin: 0px;
   padding: 20px;
   padding-top: 0px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   grid-column: 2;
   grid-row: 10;
   font-family: "times New Roman";
-  font-size: 18px;
+  font-size: 1.2vw;
   line-height: 1.5;
   text-align: left;
   letter-spacing: normal;
 
 }
 
-a{
-  margin-left: 100px;
+a.github{
+  margin-left: 20%;
   padding: 20px;
   color:black;
   font-size: 10;
@@ -525,7 +501,7 @@ a{
   text-decoration: none;
 }
 
-a:hover{
+a.github:hover{
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
@@ -603,9 +579,9 @@ a:hover{
 .big .firepad-richtext .CodeMirror {
   margin-top: 120px;
   border: 0.5px solid black;
-  height: 450px;
-  width: 450px;
-  font-size: 350px;
+  height: 50vh;
+  width: 30vw;
+  font-size: 30vw;
   letter-spacing: 2px;
   line-height: 2;
   color: black;
@@ -619,9 +595,9 @@ a:hover{
   /* border: 0.5px solid black; */
   padding-top: 10px;
   padding-left: 10px;
-  height: 1500px;
-  width: 700px;
-  font-size: 15px;
+  height: 150vh;
+  width: 40vw;
+  font-size: 1vw;
   letter-spacing: 2px;
   line-height: 2;
   color: black;
@@ -636,9 +612,9 @@ a:hover{
   /* border: 0.5px solid black; */
   padding-top: 10px;
   padding-left: 10px;
-  height: 1500px;
-  width: 400px;
-  font-size: 30px;
+  height: 150vh;
+  width: 28vw;
+  font-size: 1.8vw;
   line-height: 1;
   color: black;
   text-align: left;
@@ -647,9 +623,9 @@ a:hover{
 
 .small-box .firepad-richtext .CodeMirror {
   /* border: 0.5px solid black; */
-  height: 150px;
-  width: 150px;
-  font-size: 100px;
+  height: 20vh;
+  width: 12vw;
+  font-size: 8vw;
   line-height: 2;
   padding: 0;
   text-align: center;
@@ -661,19 +637,19 @@ a:hover{
 #bottom{
   position: relative;
   width: 100%;
-  margin-top: 60%;
+  top: 200%;
   left:10%;
   display: grid;
-  grid-template-columns: 500px 500px 500px;
+  grid-template-columns: 30vw 30vw 30vw;
   grid-template-rows: 2;
-  grid-column-gap: 200px;
-  grid-row-gap:100px;
+  grid-column-gap: 15vw;
+  grid-row-gap:7vh;
 }
 
 #com{
-  width: 40px;
-  font-size: 20px;
-  letter-spacing: 30px;
+  width: 2vw;
+  font-size: 3.5vh;
+  letter-spacing: 3vh;
   font-family: "ct";
   writing-mode: vertical-rl;
   grid-column: 1;
@@ -681,9 +657,9 @@ a:hover{
 }
 
 #sources{
-  width: 40px;
-  font-size: 20px;
-  letter-spacing: 30px;
+  width: 2vw;
+  font-size: 3.5vh;
+  letter-spacing: 3vh;
   font-family: "ct";
   writing-mode: vertical-rl;
   grid-column: 2;
@@ -691,9 +667,9 @@ a:hover{
 }
 
 #projects{
-  width: 40px;
-  font-size: 20px;
-  letter-spacing: 30px;
+  width: 2vw;
+  font-size: 3.5vh;
+  letter-spacing: 3vh;
   font-family: "ct";
   writing-mode: vertical-lr;
   grid-column: 3;
@@ -703,15 +679,15 @@ a:hover{
 
 
 #ex-comments{
-  margin-left: 15%;
+  width: 30vw;
+  margin-left: 20%;
   line-height: 2;
   background: rgba(220,220,220, 0.5);
   padding: 5px;
   border-radius: 15px;
   border: 0.5px solid rgba(220,220,220, 0.5);
-  font-family: "CT";
-  font-size: 15px;
-  letter-spacing: 10px;
+  font-size: 1vw;
+  letter-spacing: 0.5vw;
   font-family: "ct";
   grid-column: 1;
   grid-row: 1;
@@ -726,9 +702,8 @@ a:hover{
   padding: 5px;
   border-radius: 15px;
   border: 0.5px solid rgba(220,220,220, 0.5);
-  font-family: "CT";
-  font-size: 15px;
-  letter-spacing: 10px;
+  font-size: 1vw;
+  letter-spacing: 0.5vw;
   font-family: "ct";
   grid-column: 2;
   grid-row: 1;
@@ -742,9 +717,8 @@ a:hover{
   padding: 5px;
   border-radius: 15px;
   border: 0.5px solid rgba(220,220,220, 0.5);
-  font-family: "CT";
-  font-size: 15px;
-  letter-spacing: 10px;
+  font-size: 1vw;
+  letter-spacing: 0.5vw;
   font-family: "ct";
   grid-column: 3;
   grid-row: 1;
@@ -752,26 +726,27 @@ a:hover{
 }
 
 .bottom-ø{
+  margin-top: -65vh;
   font-family: "CT";
-  font-size: 40px;
-  margin-top: -600px;
+  font-size: 2.5vw;
+  grid-column: auto;
   grid-row: auto;
 }
 
 #firepad-7{
-  margin-left: 50px;
+  margin-left: 3vw;
   grid-column: 1;
   grid-row: 2;
 }
 
 #firepad-8{
-  margin-left: 50px;
+  margin-left: 3vw;
   grid-column: 2;
   grid-row: 2;
 }
 
 #firepad-9{
-  margin-left: 50px;
+  margin-left: 3vw;
   grid-column: 3;
   grid-row: 2;
 }
@@ -782,9 +757,9 @@ a:hover{
   background: rgba(250, 250, 250, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   font-family: "times New Roman";
-  height: 800px;
-  width: 450px;
-  font-size: 20px;
+  height: 100vh;
+  width: 30vw;
+  font-size: 1vw;
   padding: 20px;
   line-height: normal;
   color: black;

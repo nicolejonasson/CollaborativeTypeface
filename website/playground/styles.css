@@ -21,56 +21,56 @@ body {
 #head-bar{
   z-index: 1000;
   padding: 5px;
-  width: 2100px;
-  letter-spacing: 10px;
+  width: 200%;
+  letter-spacing: 0.5vw;
   font-family: "CT";
   position: fixed;
   margin: 0px;
   left: 0;
   top:0;
-  font-size: 15px;
+  font-size: 0.9vw;
   color: black;
   background: rgba(250, 250, 250, 0.5);
   box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 #exit{
-  padding-top: 50px;
-  z-index: 100;
+  padding-top: 4vh;
+  /* padding-right: 5px; */
+  z-index: 10;
   background: rgba(250, 250, 250, 0.5);
   box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.1);
-  height: 3000px;
-  letter-spacing: 10px;
+  height: 150%;
+  width: 2vw;
+  line-height: 2vw;
+  letter-spacing: 0.5vw;
   font-family: "CT";
   position: fixed;
-  width: 30px;
-  line-height: 30px;
   /* position: absolute; */
   top: 0;
   left: 0;
-  font-size: 15px;
+  font-size: 1vw;
   color: black;
   writing-mode: vertical-rl;
-
 }
 
 #change{
   text-align: center;
-  padding: 20px;
+  padding: 5%;
 
   font-family: "ct";
-  font-size: 20px;
-  letter-spacing: 10px;
+  font-size: 1.2vw;
+  letter-spacing: 0.5vw;
 
 }
 
 
 #grad{
   text-align: center;
-  margin-top: 200px;
-  margin-left: 100px;
-  height: 150px;
-  width: 400px;
+  margin-top: 10%;
+  margin-left: 10%;
+  height: 15vh;
+  width: 25vw;
   border-radius: 15px;
   background: rgb(250,250,250, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
@@ -84,16 +84,19 @@ body {
 
 
 .colors{
-  padding: 20px;
-  font-size: 15px;
+  padding: 2%;
+  font-size: 1vw;
   position: absolute;
   background: rgb(220,220,220, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   visibility: hidden;
+  text-align: left;
+
 }
 
 span{
+  letter-spacing: 0.2vw;
   font-family: "ct";
 }
 
@@ -104,7 +107,7 @@ span{
     -webkit-text-stroke: 0.8px white;
     position: absolute;
     font-family: "CT";
-    font-size: 60px;
+    font-size: 4.5vw;
     z-index: 10;
     text-align: center;
     cursor: -webkit-grabbing;
@@ -271,14 +274,14 @@ span{
 
 
 
-
+/* 
 #draggable-0{
-  left:35%;
-  top:168%;
+  left:30vw;
+  top:1300px;
 }
 
 #draggable-1{
-  left:35%;
+  left:30vw;
   top:250%;
 }
 
@@ -290,13 +293,13 @@ span{
 #draggable-3{
   left:85%;
   top:250%;
-}
+} */
 
 
 
 i {
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
 }
@@ -304,10 +307,9 @@ i {
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    padding: 15px;
+    padding: 3%;
     float: right;
-    margin-top: 10px;
-    margin-right: 10px;
+    line-height: 5vh;
 }
 
 .left {
@@ -323,36 +325,36 @@ i {
 
 
 .box{
-
   -webkit-user-select: none;
   cursor: cell;
-  width: 500px;
-  height: 50px;
-  line-height: 50px;
-  padding: 20px;
+  width: 30vw;
+  height: 3vh;
+  line-height: 5vh;
+  padding: 2vw;
   font-family: "CT";
   border-radius: 15px;
   color: black;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
-  letter-spacing: 10px;
-}
+  letter-spacing: 0.5vw;
 
+}
 .box-head{
   -webkit-user-select: none;
   cursor: cell;
-  width: 500px;
-  height: 50px;
-  line-height: 50px;
-  padding: 20px;
+  width: 30vw;
+  height: 3vh;
+  line-height: 5vh;
+  letter-spacing: 1vw;
+  padding: 2vw;
   font-family: "CT";
   border-radius: 15px;
   color: black;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
-  letter-spacing: 10px;
+
 }
 
 .box-head:hover{
@@ -381,7 +383,7 @@ i {
 
 #head-1{
   z-index: 1;
-  font-size: 30px;
+    font-size: 2vw;
   grid-column: 1;
   grid-row:1;
 
@@ -395,7 +397,7 @@ i {
   height: 300px;
   width: 50px; */
   z-index: 1;
-  font-size: 30px;
+  font-size: 2vw;
   grid-column: 2;
   grid-row:2;
 
@@ -403,7 +405,7 @@ i {
 
 #head-3{
   z-index: 1;
-  font-size: 30px;
+  font-size: 2vw;
   grid-column: 1;
   grid-row:3;
 }
@@ -413,7 +415,7 @@ i {
 
 #head-4{
   z-index: 0;
-  font-size: 20px;
+  font-size: 1.5vw;
   grid-column: 3;
   grid-row:3;
   visibility: hidden;
@@ -422,7 +424,7 @@ i {
 
 #head-5{
   z-index: 0;
-  font-size: 20px;
+  font-size: 1.5vw;
   grid-column: 2;
   grid-row:4;
   visibility: hidden;
@@ -431,9 +433,9 @@ i {
 
 #head-6{
   z-index: 1;
-  font-size: 15px;
+  font-size: 1.5vw;
   /* line-height: normal; */
-  letter-spacing: 10px;
+
   grid-column: 1;
   grid-row:5;
   visibility: hidden;
@@ -442,9 +444,7 @@ i {
 
 #head-7{
   z-index: 1;
-  font-size: 15px;
-  /* line-height: normal; */
-  letter-spacing: 5px;
+  font-size: 1vw;
   grid-column: 2;
   grid-row:6;
   visibility: hidden;
@@ -453,9 +453,7 @@ i {
 
 #head-8{
   z-index: 1;
-  font-size: 15px;
-  /* line-height: normal; */
-  letter-spacing: 10px;
+  font-size: 1vw;
   grid-column: 3;
   grid-row:7;
   visibility: hidden;
@@ -464,34 +462,12 @@ i {
 
 #head-9{
   z-index: 1;
-  font-size: 15px;
-  /* line-height: normal; */
-  letter-spacing: 5px;
+  font-size: 1vw;
   grid-column: 2;
   grid-row:8;
   visibility: hidden;
 }
 
-#head-10{
-  z-index: 1;
-  font-size: 15px;
-  /* line-height: normal; */
-  letter-spacing: 10px;
-  grid-column: 5;
-  grid-row:6;
-  visibility: hidden;
-
-}
-
-#head-11{
-  z-index: 1;
-  font-size: 15px;
-  /* line-height: normal; */
-  letter-spacing: 5px;
-  grid-column: 5;
-  grid-row:7;
-  visibility: hidden;
-}
 
 
 
@@ -502,25 +478,29 @@ i {
 
 
 
-#heading{
-  margin-left: 20%;
-  margin-top: 20%;
-  /* margin-bottom: -400px; */
-  letter-spacing: 20px;
-  font-family: "CT";
-  font-size: 40px;
-  text-align: center;
-}
+
 
 #drawing-container{
   width: 60%;
-  left: 30%;
+  /* left: 20%; */
   position: relative;
   /* left: 20%; */
-  margin-top: 40px;
+  margin-left: 30vw;
+  margin-top: 50%;
   display: grid;
   grid-column:3 1fr;
   grid-row: 5 1fr;
+  /* justify-content: center; */
+}
+
+#heading{
+  margin-top:-100px;
+  letter-spacing: 1.2vw;
+  font-family: "CT";
+  font-size: 2vw;
+  text-align: center;
+  grid-row: 2;
+  grid-column: 2;
 }
 
 .ramme{
@@ -536,6 +516,8 @@ i {
 
 #canvasContainer{
   cursor: cell;
+  /* width: 50vw;
+  height: 30vh; */
   margin: 0px;
   padding: 10px;
   /* background: black; */
@@ -547,7 +529,6 @@ i {
   margin-left: 0px;
   grid-column: 2;
   grid-row: 1;
-  margin-left: -100px;
 
 }
 
@@ -555,7 +536,6 @@ i {
   margin-left: 0px;
   grid-column: 2;
   grid-row: 3;
-  margin-left: -100px;
 
 }
 
@@ -563,20 +543,13 @@ i {
   writing-mode: vertical-rl;
   grid-column: 1;
   grid-row: 2;
-  /* margin-bottom: -675px; */
-  /* margin-bottom: -40%;
-  margin-left: 20%; */
 }
 
 #right-frame{
   writing-mode: vertical-rl;
   margin-right: 60px;
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 2;
-  margin-left: -200px;
-  /* margin-bottom: -675px; */
-  /* margin-bottom: -40%;
-  margin-left: 78%; */
 }
 
 
@@ -595,6 +568,7 @@ i {
 #list{
   grid-column: 2;
   grid-row: 5;
+  justify-self: center;
 
 }
 
@@ -643,31 +617,34 @@ i {
 
 
 #drawingList{
-  margin-left: 150px;
+  /* margin-left: 15%; */
   border-radius: 20px;
-  padding: 20px;
-  width: 630px;
+  padding: 5%;
+  width: 40vw;
   background: rgba(250, 250, 250, 0.5);
   box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   -webkit-user-select: none;
   position:relative;
   list-style: none;
   text-decoration: none;
-  letter-spacing: 20px;
+  letter-spacing: 1vw;
   font-family: "CT";
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 1vw;
+  line-height: 2.5vh;
   color: black;
   text-align: center;
   text-transform: lowercase;
+  margin-left: 20px;
+
+  /* margin-left: 20%; */
 }
 
 
 #text{
   margin-bottom: 50px;
   font-family: "CT";
-  letter-spacing: 10px;
-  font-size: 20px;
+  letter-spacing: 0.5vw;
+  font-size: 1.5vw;
   text-align: center;
 }
 
@@ -683,7 +660,7 @@ button{
   height: auto;
   font-family: "CT";
   letter-spacing: 5px;
-  font-size: 15px;
+  font-size: 1vw;
   /* box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1); */
 }
 

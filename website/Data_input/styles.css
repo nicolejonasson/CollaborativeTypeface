@@ -1,0 +1,17 @@
+
+html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+
+#text{
+  width:100px;
+  height: 100px;
+  background:blue;
+  color: black;
+  font-size: 100px;
+}

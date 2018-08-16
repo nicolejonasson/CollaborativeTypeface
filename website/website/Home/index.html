@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <!-- <style> body {padding: 0; margin: 0;} </style> -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="../p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+    <!-- Firepad -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+  </head>
+
+  <body onload="init()">
+    <!-- <div onclick= "showRooms()" id ="test">test</div> -->
+
+
+    <div id= "wrapper">
+
+      <div class =" box" id="firepad-0"> </div>
+
+    </div>
+
+
+    <script>
+      function init() {
+        // // Initialize Firebase.
+        // // TODO: replace with your Firebase project configuration.
+        var config = {
+          apiKey: "AIzaSyDTLvn12YhyZ86R_zHw2AauWa8swoJwRZc",
+          authDomain: "collab-6fa95.firebaseapp.com",
+          databaseURL: "https://collab-6fa95.firebaseio.com",
+          projectId: "collab-6fa95",
+          storageBucket: "collab-6fa95.appspot.com",
+          messagingSenderId: "942968685131"
+
+        };
+        firebase.initializeApp(config);
+
+
+        for (var i = 0; i < 1; i++) {
+
+          var firepadRef = firebase.database().ref("front"+i);
+
+          var codeMirror = CodeMirror(document.getElementById("firepad-"+i), { lineWrapping: true });
+
+          var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
+            richTextShortcuts: true,
+            richTextToolbar: false,
+          });
+        }
+    }
+    </script>
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="box" id = "box-2">
+  <ul class = "medi">
+    <li><a href="#"> library </a></li>
+    <li><a href="#"> the workshop </a></li>
+    <li><a href="#"> kitchen </a></li>
+    <li><a href="#"> playground </a></li>
+  </ul>
+</div> -->
