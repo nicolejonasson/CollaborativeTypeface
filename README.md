@@ -5,7 +5,7 @@
 
 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3
 
--------- > Try the typeface: https://nicolejonasson.github.io/CollaborativeTypeface/website/Home/< --------
+-------- > Try the typeface: https://nicolejonasson.github.io/CollaborativeTypeface/website/home/index.html< --------
 
 ![guide1](https://user-images.githubusercontent.com/38101829/41201928-6c9d9dae-6cc1-11e8-8692-d785b0da3016.png)
 
