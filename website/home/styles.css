@@ -11,23 +11,21 @@ html {
 
 body {
   /* background: radial-gradient(rgb(215, 255, 160), white, rgb(215, 255, 160)); */
-  width: 120%;
+
   margin: 0;
   height: 100%;
   position: relative;
 }
 
 #canvas-container{
-  background: blue;
-  width: 150%;
+  width: 110%;
   top:0;
   left: 0;
 }
 
 
 #wrapper{
-  /* margin: 10%; */
-  width: 100%;
+  width: 80%;
   height: 80%;
   top: 20%;
 
@@ -36,21 +34,19 @@ body {
   grid-template-columns: repeat(5,1fr);
   grid-template-rows:repeat(5,1fr);
   /* margin-right: ; */
-  /* margin-left: 2%; */
+  margin-left: 8%;
 
 }
 
 #wrapper > div{
-  /* width: 100%; */
-  /* height: 70%; */
     -webkit-user-select: none;
     cursor: cell;
-    /* padding: 5%; */
+    padding: 20px;
     border-radius: 15px;
     color: black;
     background: rgba(255, 255, 255, 0.8);
-    box-shadow:  10px 10px 200px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
+    box-shadow:  10px 10px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
 }
 
 #wrapper > .box:hover{
@@ -59,23 +55,24 @@ body {
 }
 
 #intro{
-  padding-top: 5vh;
-  height: 70vh;
-  width: 30vw;
+  height: 600px;
+  /* font-size: 40px; */
+  width: 500px;
+  /* margin-left: 30%;
+  margin-right: 30%; */
   grid-column: 3;
   grid-row: 3;
-
 }
 
 #box{
   background: rgba(255, 255, 255, 0.1);
-  width: 90%;
-  height: 17vh;
-  margin-top: 15vh;
+  width: 400px;
+  height: 150px;
+  margin-top: 100px;
+  margin-left: 50px;
   margin-bottom: 0px;
   grid-column: 3;
   grid-row: 3;
-  margin-left: 5%;
 }
 
 #box:hover{
@@ -137,43 +134,42 @@ body {
 }
 
 #box-8{
-
+  margin-top: 100px;
   visibility: hidden;
   grid-column: 5;
-  grid-row: 5;
+  grid-row: 4;
 }
 
 #box-9{
-
+  margin-top: 100px;
   visibility: hidden;
   grid-column: 1;
-  grid-row: 5;
+  grid-row: 4;
 }
 
 p.big{
   font-family: "CT";
-  font-size:3.5vw;
-  padding: 2%;
+  font-size: 60px;
   text-align: center;
-  margin-top: 2%;
-  letter-spacing: 1vw;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  margin-top: 20px;
+  letter-spacing: 20px;
   line-height: 1;
 
 
 }
 
-
-span#head{
+span{
   padding: 5px 10px 5px 10px;
-  width: auto;
   text-align: center;
   font-family: "CT";
-  font-size:1.3vw;
-  letter-spacing: 0.2vw;
+  font-size: 20px;
+  letter-spacing: 5px;
   line-height: 2;
   text-transform: lowercase;
   /* background: rgba(255, 255, 255, 0.5); */
-  box-shadow:  -5px 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
 }
 
@@ -181,8 +177,9 @@ p.small{
   font-family: "times new roman";
   /* font-family: "ct"; */
   /* letter-spacing: 5px; */
-  margin-bottom: 20vh;
-  font-size:1.2vw;
+
+  margin-bottom: 200px;
+  font-size: 22px;
   text-align: center;
   line-height: 1.2;
 }
@@ -190,13 +187,10 @@ p.small{
 
 .des{
   font-family: "Times New Roman";
-  padding-left: 5%;
-  padding-right: 5%;
-  font-size:1vw;
-  width: 20vw;
-  height: 15vh;
+  font-size: 15px;
+  width: 300px;
+  height: 80px;
 }
-
 
 .box:hover > div {
   background: rgba(220, 220, 220, 0.5);
@@ -205,13 +199,13 @@ p.small{
 }
 
 .box{
-  width: 25vw;
-  height: 8vh;
+  width: 400px;
+  height: 50px;
   text-align: center;
-  letter-spacing: 0.5vw;
+  letter-spacing: 10px;
   font-family: "ct";
-  font-size:2vw;
-  line-height: 4vw;
+  font-size: 30px;
+  line-height: 50px;
   color: black;
 
 }
@@ -221,7 +215,7 @@ a{
   /* margin-left:90px; */
   text-align: center;
   float: right;
-  margin-top: 80px;
+  margin-top: 10px;
   margin-right: 10px;
   padding: 10px;
   border: 0.5px solid black;
@@ -236,33 +230,32 @@ a:hover{
   border: 0.5px solid white;
 }
 
-
 i {
     border: solid black;
-    border-width: 0 0.1vw 0.1vw 0;
-
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
 }
 
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    padding: 3%;
+    padding: 15px;
     float: right;
-    margin-top: 5%;
-    margin-right: 3%;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-    padding: 3%;
+    padding: 15px;
     float: left;
-    margin-top: 5%;
-    margin-left: 3%;
+    margin-top: 10px;
+    margin-left: : 10px;
 }
 
 .down {
-    transform: rotate(0deg);
+    transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    padding: 10%;
 }

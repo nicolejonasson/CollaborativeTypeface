@@ -23,7 +23,7 @@
 
   <body>
     <div id= "head-bar">
-      <div>the playground the playground the playground the playground the playground the playground the play</div>
+      <div>the playground the playground the playground the playground the playground the playground the playground the playground the playground the playground</div>
     </div>
 
     <a href = "../home/index.html" >
@@ -65,7 +65,7 @@
 
 
 
-
+<!--
       <div class = "drag" id="draggable-0" >o</div>
       <div class = "drag" id="draggable-1" >o</div>
       <div class = "drag" id="draggable-2" >o</div>
@@ -79,7 +79,7 @@
       <div class = "drag" id="draggable-0" >o</div>
       <div class = "drag" id="draggable-1" >o</div>
       <div class = "drag" id="draggable-2" >o</div>
-      <div class = "drag" id="draggable-3" >o</div>
+      <div class = "drag" id="draggable-3" >o</div> -->
     </div>
 
     <div id= "head">
@@ -91,7 +91,7 @@
         <div onclick = "show('head-6')" class ="box" id="head-5">mouse and draw </div>
 
           <div onclick = "show('head-7')" class ="box" id="head-6">on the canvas </div>
-          <div onclick = "show('head-8')"class ="box" id="head-7">continue an old drawing </i></div>
+          <div onclick = "show('head-8')"class ="box" id="head-7">continue on an old drawing </i></div>
 
           <div onclick = "show('head-9')" class ="box" id="head-8">or create a new one</i></div>
           <div onclick = "show('head-9')"class ="box" id="head-9">and have fun </div>
@@ -125,10 +125,9 @@
     </div>
     </div>
 
-
+    <div id="heading"> drawing canvas</div>
 
     <div id="drawing-container">
-    <div id="heading"> drawing canvas</div>
     <div id="rect"></div>
       <div id="left-frame">
         <div class = "ramme">øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø</div>
@@ -222,9 +221,9 @@
         }
 
 
-        $(function() {
-            $( ".drag" ).draggable();
-        });
+        // $(function() {
+        //     $( ".drag" ).draggable();
+        // });
 
         function grad(color){
           var x = document.getElementById(color).value;
@@ -234,6 +233,78 @@
           console.log(x);
 
         }
+
+        $(function(){
+  var clicked = false,
+      clickY, clickX;
+    $.dragDivs = $(function(){
+      elems = $( ".drag" );
+      var sPositions = localStorage.positions || "{}",
+        positions = JSON.parse(sPositions);
+    $.each(positions, function (id, pos) {
+        $("#" + id).css(pos)
+    })
+    var i;
+    for (i = 0; i < elems.length; i++) {
+      $("#"+elems[i].id).draggable({
+          scroll: false,
+          start: function (event, ui){
+                clicked = false
+          },
+          stop: function (event, ui) {
+              clicked = false
+              positions[this.id] = ui.position
+              localStorage.positions = JSON.stringify(positions)
+          }
+      });
+    }
+  });
+
+    $.dragScroll = function(options) {
+      var settings = $.extend({
+        scrollVertical: true,
+        scrollHorizontal: true,
+        cursor: null
+      }, options);
+
+
+
+      var getCursor = function() {
+        if (settings.cursor) return settings.cursor;
+        if (settings.scrollVertical && settings.scrollHorizontal) return 'move';
+        if (settings.scrollVertical) return 'row-resize';
+        if (settings.scrollHorizontal) return 'col-resize';
+      }
+
+      var updateScrollPos = function(e, el) {
+        $('html').css('cursor', getCursor());
+        var $el = $(el);
+        settings.scrollVertical && $el.scrollTop($el.scrollTop() + (clickY - e.pageY));
+        settings.scrollHorizontal && $el.scrollLeft($el.scrollLeft() + (clickX - e.pageX));
+      }
+
+      $(document).on({
+        'mousemove': function(e) {
+          clicked && updateScrollPos(e, this);
+        },
+        'mousedown': function(e) {
+          clickY = e.pageY;
+          clickX = e.pageX;
+          clicked = true;
+        },
+        'mouseup': function() {
+          clicked = false;
+          $('html').css('cursor', 'auto');
+        }
+      });
+    }
+  }(jQuery));
+
+  $.dragScroll();
+
+  $('.drag').draggable({cancel: ''}); /* making textarea draggable */
+
+
     </script>
 
   </body>

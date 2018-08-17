@@ -2,7 +2,6 @@ let angle = 0;
 let letters;
 let rotateMouse;
 let rotateMouseY;
-let zoom;
 let canvas;
 
 function preload(){
@@ -10,8 +9,7 @@ function preload(){
 }
 
 function setup() {
-
-  canvas= createCanvas(windowWidth+700,windowHeight+600,WEBGL);
+  canvas= createCanvas(windowWidth+600,windowHeight+500,WEBGL);
   // canvas.parent("canvas-container");
   canvas.position(0,0);
   canvas.style("z-index","-1");
@@ -21,10 +19,8 @@ function setup() {
 
 function draw() {
   background(255,255,255,0.1);
-  // let camX = map(mouseX,0, width, -200,200);
-  //
-  let zoom = mouseY;
-  camera(0,0,zoom,0,0,0,0,1,0);
+  let camX = map(mouseX,0, width, -200,200);
+  camera(0,0,mouseY,0,0,0,0,1,0);
 
   ambientLight(255,255,255);
   // directionalLight(255,0,255,1,-1,0);
@@ -33,6 +29,7 @@ function draw() {
   // rotateZ(rotateMouseY);
   angle += -0.001;
   rotateMouse = (mouseX * 0.01);
+  rotateMouseY = (mouseY * 10);
   // box(100);
   fill(255,255,255);
   stroke(0);

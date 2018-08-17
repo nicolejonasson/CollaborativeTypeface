@@ -41,7 +41,7 @@
 </div>
 
     <a href = "../home/index.html" >
-      <div id= "exit"> go back to common room go back to common room go back to common room</div>
+      <div id= "exit"> go back to common room go back to common room go back to common room go back to common room</div>
     </a>
 
     <div id = "canvasContainer"> </div>
@@ -97,7 +97,7 @@
 
 
   <div class = "links">
-      <div onmousemove ="updateList()" id = "heading"> subjects </div>
+      <div onmousemove ="updateList()" id = "heading"> subject </div>
       <li onclick ="firepadStyles('firepad-0')">o
         <input onblur="submitText('input-0')" type = "text" id = "input-0">
       </li>
@@ -485,7 +485,7 @@ function submitText(name){
       x.style.background = "rgb(255, 255, 255 ,0.5)";
       // x.style.background = "rgb(249, 246, 239,0.5)";
       x.style.zIndex = "0";
-      x.style.width ="20vw"
+      x.style.width ="250px"
       x.style.padding ="0px";
       }
 
@@ -495,7 +495,7 @@ function submitText(name){
       // x.style.transition = "all 2s";
       x.style.background = "grey";
       x.style.zIndex = "2";
-      x.style.width ="30vw";
+      x.style.width ="400px";
       }
     }
 
@@ -534,9 +534,80 @@ function submitText(name){
 
       }
 
-      $(function() {
-          $( ".drag" ).draggable();
-      });
+      // $(function() {
+      //     $( ".drag" ).draggable();
+      // });
+
+
+      $(function(){
+var clicked = false,
+    clickY, clickX;
+  $.dragDivs = $(function(){
+    elems = $( ".drag" );
+    var sPositions = localStorage.positions || "{}",
+      positions = JSON.parse(sPositions);
+  $.each(positions, function (id, pos) {
+      $("#" + id).css(pos)
+  })
+  var i;
+  for (i = 0; i < elems.length; i++) {
+    $("#"+elems[i].id).draggable({
+        scroll: false,
+        start: function (event, ui){
+              clicked = false
+        },
+        stop: function (event, ui) {
+            clicked = false
+            positions[this.id] = ui.position
+            localStorage.positions = JSON.stringify(positions)
+        }
+    });
+  }
+});
+
+  $.dragScroll = function(options) {
+    var settings = $.extend({
+      scrollVertical: true,
+      scrollHorizontal: true,
+      cursor: null
+    }, options);
+
+
+
+    var getCursor = function() {
+      if (settings.cursor) return settings.cursor;
+      if (settings.scrollVertical && settings.scrollHorizontal) return 'move';
+      if (settings.scrollVertical) return 'row-resize';
+      if (settings.scrollHorizontal) return 'col-resize';
+    }
+
+    var updateScrollPos = function(e, el) {
+      $('html').css('cursor', getCursor());
+      var $el = $(el);
+      settings.scrollVertical && $el.scrollTop($el.scrollTop() + (clickY - e.pageY));
+      settings.scrollHorizontal && $el.scrollLeft($el.scrollLeft() + (clickX - e.pageX));
+    }
+
+    $(document).on({
+      'mousemove': function(e) {
+        clicked && updateScrollPos(e, this);
+      },
+      'mousedown': function(e) {
+        clickY = e.pageY;
+        clickX = e.pageX;
+        clicked = true;
+      },
+      'mouseup': function() {
+        clicked = false;
+        $('html').css('cursor', 'auto');
+      }
+    });
+  }
+}(jQuery));
+
+$.dragScroll();
+
+$('.draggable').draggable({cancel: ''}); /* making textarea draggable */
 
 
 

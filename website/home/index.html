@@ -20,10 +20,10 @@
   <body>
 
     <div id = "canvas-container"></div>
-    <div id = "wrapper">
+    <div id= "wrapper">
 
       <div onclick= "showRooms()" id = "intro" >
-        <p class = "small"> <span id= "head"> welcome to </span> <br> </p>
+        <p class = "small"> <span> wellcome to </span> <br> </p>
 
 
         <p class = "small"> <br> A home for all the people interested in <br> design and visual communication.<br>
@@ -31,12 +31,12 @@
                         <br>A place where everyone can contribute <br>
                         and benefit from each others knowledge. <br><br>
 
-                        <span id= "head"> Sharing and caring <br></span> <span id= "head"> is waiting for you </span>
+                        <span> Sharing and caring <br></span> <span> is waiting for you </span>
 
 
                         <br><br></i>Click to enter the rooms<br>
                         <!-- <i class="arrow right"></i> -->
-                        <!-- <i class="arrow down"></i> -->
+                        <i class="arrow down"></i>
         </p>
       </div>
 
@@ -64,43 +64,36 @@
         </div> -->
 
         <div  onclick= "show('box-7')" class = "box" id = "box-2">
-            library <span> <i class="arrow left"></i> </span>
+            library<i class="arrow left"></i>
         </div>
 
         <div onclick= "show('box-6')" class = "box" id = "box-3">
-            workshop <span> <i class="arrow right"></i></span>
+            workshop<i class="arrow right"></i>
         </div>
 
         <div onclick= "show('box-9')"  class = "box" id = "box-4">
-          kitchen <span> <i class="arrow left"></i></span>
+          kitchen <i class="arrow left"></i>
         </div>
         <div onclick= "show('box-8')" class = "box" id = "box-5">
-            playground <span> <i class="arrow right"></i> </span>
+            playground <i class="arrow right"></i>
         </div>
 
         <div class="des" id = "box-6">
-          <p>
           A room for collaborative work and ideas. This is where we make stuff happen and share ideas for the future.
           <a href = "../workshop/index.html"> enter here </a>
-          </p>
         </div>
         <div class="des" id = "box-7">
-          <p>
             The room for text, words, theorie and questions. For all who like to read, or who would like to, like to read.
           <a href = "../library/index.html" >enter here </a>
-          </p>
         </div>
         <div class="des" id = "box-8">
-          <p>
            A place to play, draw a drawing and have fun.
           <a href = "../playground/index.html" >enter here </a>
-          </p>
         </div>
 
         <div class="des" id = "box-9">
-          <p> A room for information and updates. We cook food for thoughts and keep each other in the loop.
+          A room for information and updates. We cook food for thoughts and keep each other in the loop.
             <a href = "../kitchen/index.html" >enter here </a>
-          </p>
         </div>
       </div>
 
@@ -187,6 +180,48 @@
         $( ".drag" ).draggable();
     });
 
+    $.dragScroll = function(options) {
+      clicked = false
+      var settings = $.extend({
+        scrollVertical: true,
+        scrollHorizontal: true,
+        cursor: null
+      }, options);
+
+
+
+      var getCursor = function() {
+        if (settings.cursor) return settings.cursor;
+        if (settings.scrollVertical && settings.scrollHorizontal) return 'move';
+        if (settings.scrollVertical) return 'row-resize';
+        if (settings.scrollHorizontal) return 'col-resize';
+      }
+
+      var updateScrollPos = function(e, el) {
+        $('html').css('cursor', getCursor());
+        var $el = $(el);
+        settings.scrollVertical && $el.scrollTop($el.scrollTop() + (clickY - e.pageY));
+        settings.scrollHorizontal && $el.scrollLeft($el.scrollLeft() + (clickX - e.pageX));
+      }
+
+      $(document).on({
+        'mousemove': function(e) {
+          clicked && updateScrollPos(e, this);
+        },
+        'mousedown': function(e) {
+          clickY = e.pageY;
+          clickX = e.pageX;
+          clicked = true;
+        },
+        'mouseup': function() {
+          clicked = false;
+          $('html').css('cursor', 'auto');
+        }
+      });
+    }
+  // }(jQuery));
+
+  $.dragScroll();
 
     </script>
 

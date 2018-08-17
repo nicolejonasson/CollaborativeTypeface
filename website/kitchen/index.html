@@ -11,7 +11,7 @@
   <script src="../p5.min.js"></script>
   <script src="../addons/p5.dom.min.js"></script>
   <script src="../addons/p5.sound.min.js"></script>
-  <!-- <script src="sketch.js"></script> -->
+  <script src="sketch.js"></script>
 
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
   <script src="../js/jquery-min.js"></script>
@@ -43,7 +43,7 @@
 </div>
 
     <a href = "../home/index.html" >
-      <div id= "exit"> go back to common room go back to common room go back to common room</div>
+      <div id= "exit"> go back to common room go back to common room go back to common room go back to common room</div>
     </a>
 
   <div id= "head">
@@ -60,8 +60,7 @@
           <div onclick = "show('head-9')"class ="box" id="head-8">about things happening</div>
 
           <div onclick = "show('head-10')"class ="box" id="head-9">use the corner to talk</div>
-          <div onclick = "show('head-11')"class ="box" id="head-10">about anything</div>
-          <div onclick = "show('head-11')"class ="box" id="head-11">and everything</div>
+          <div onclick = "show('head-10')"class ="box" id="head-10">about anything and everything</div>
 
               <!-- <div onclick = "show('head-9')" class ="box" id="head-8">collaborative typeface</div>
               <div class ="box" id="head-9">sharing space</div> -->
@@ -75,7 +74,7 @@
   <div id="notice-wrapper">
     <div id= "heading"> share events and happenings below <br> remember to write time and date <br> continue from the top</div>
     <div id= "noticeboard"> notice board </div>
-    <div id= "o"> oooooooooooooo </div>
+    <div id= "o"> ooooooooooo </div>
     <div id= "noticeboard-0"></div>
   </div>
 
@@ -201,6 +200,77 @@
         x.style.visibility = 'visible';
       }
     }
+
+
+                $(function(){
+          var clicked = false,
+              clickY, clickX;
+            $.dragDivs = $(function(){
+              elems = $( ".drag" );
+              var sPositions = localStorage.positions || "{}",
+                positions = JSON.parse(sPositions);
+            $.each(positions, function (id, pos) {
+                $("#" + id).css(pos)
+            })
+            var i;
+            for (i = 0; i < elems.length; i++) {
+              $("#"+elems[i].id).draggable({
+                  scroll: false,
+                  start: function (event, ui){
+                        clicked = false
+                  },
+                  stop: function (event, ui) {
+                      clicked = false
+                      positions[this.id] = ui.position
+                      localStorage.positions = JSON.stringify(positions)
+                  }
+              });
+            }
+          });
+
+            $.dragScroll = function(options) {
+              var settings = $.extend({
+                scrollVertical: true,
+                scrollHorizontal: true,
+                cursor: null
+              }, options);
+
+
+
+              var getCursor = function() {
+                if (settings.cursor) return settings.cursor;
+                if (settings.scrollVertical && settings.scrollHorizontal) return 'move';
+                if (settings.scrollVertical) return 'row-resize';
+                if (settings.scrollHorizontal) return 'col-resize';
+              }
+
+              var updateScrollPos = function(e, el) {
+                $('html').css('cursor', getCursor());
+                var $el = $(el);
+                settings.scrollVertical && $el.scrollTop($el.scrollTop() + (clickY - e.pageY));
+                settings.scrollHorizontal && $el.scrollLeft($el.scrollLeft() + (clickX - e.pageX));
+              }
+
+              $(document).on({
+                'mousemove': function(e) {
+                  clicked && updateScrollPos(e, this);
+                },
+                'mousedown': function(e) {
+                  clickY = e.pageY;
+                  clickX = e.pageX;
+                  clicked = true;
+                },
+                'mouseup': function() {
+                  clicked = false;
+                  $('html').css('cursor', 'auto');
+                }
+              });
+            }
+          }(jQuery));
+
+          $.dragScroll();
+
+          $('.draggable').draggable({cancel: ''}); /* making textarea draggable */
 
 
 
